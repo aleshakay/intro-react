@@ -42,13 +42,21 @@ const goats = [
 ];
 
 const getGoats = () => goats;
+
 const freeAGoat = (goatId) => {
   goats.forEach((response) => {
     if (response.id === goatId) {
       response.isBusy = false;
     }
   });
+};
+const useAGoat = (goatId) => {
+  goats.forEach((response) => {
+    if (response.id === goatId) {
+      response.isBusy = true;
+    }
+  });
   // const goatIndex = goats.findIndex((goat => goat.id === goat.id);
   // goats[goatIndex].isBusy = false;
 };
-export default { getGoats, freeAGoat };
+export default { getGoats, freeAGoat, useAGoat };
